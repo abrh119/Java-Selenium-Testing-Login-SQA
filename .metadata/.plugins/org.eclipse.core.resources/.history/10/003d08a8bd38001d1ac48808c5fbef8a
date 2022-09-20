@@ -1,0 +1,22 @@
+package TestsPackage;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty(
+	            "webdriver.chrome.driver", "C:\\ab\\Selenium\\chromedriver.exe");
+	        // Instantiate a ChromeDriver class.
+	        ChromeDriver driver = new ChromeDriver();
+
+	        // Launch Website
+	        driver.get("https://www.github.com/abrh119");
+	        System.out.println(driver.getTitle());
+	        
+	    }
+
+	}
+

@@ -1,0 +1,21 @@
+package TestsPackage;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+	    //Login login = new Login();
+	    LoginTwo loginTwo = new LoginTwo();
+	    
+	    //login.loginFunc();
+	    try {
+			loginTwo.loginFunc();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	        
+	    }
+
+}
+

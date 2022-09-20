@@ -1,0 +1,53 @@
+package TestsPackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginTwo {
+
+	public void loginFunc() throws Exception {
+		System.setProperty("webdriver.chrome.driver", "C:\\ab\\Selenium\\chromedriver.exe");
+	    // Instantiate a ChromeDriver class.
+	    WebDriver  driver = new ChromeDriver();
+
+	    
+	    try {
+	    	
+	    	driver.get("https://sampleLoginForm.com");
+	    	
+	    	WebElement username = driver.findElement(By.xpath("//input[@name='username']"));
+		    WebElement passwordElement = driver.findElement(By.xpath("//input[@name='pass']"));
+		    WebElement loginBtnElement = driver.findElement(By.xpath("//button[@name='login']"));
+		    
+		    username.sendKeys("ADmin123"); 
+		    passwordElement.sendKeys("ADminPassword");
+		    
+		    loginBtnElement.click(); 
+		    
+		    String actualUrl="https://sampleloginform.com/dashboard/"; 
+		    String expectedUrl= driver.getCurrentUrl(); 
+		    
+		    
+		    
+		    if(actualUrl.equalsIgnoreCase(expectedUrl)) { 
+		    	System.out.println("Test passed"); 
+		    	} 
+		    else { 
+		    	System.out.println("Test failed"); 
+		    	}   
+			
+		} 
+	    catch (Exception e) {
+			
+			System.out.println(e.getMessage());
+			
+		}
+	    
+	    
+	    
+	}
+
+} 
+

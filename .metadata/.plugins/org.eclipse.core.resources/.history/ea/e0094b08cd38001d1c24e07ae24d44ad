@@ -1,0 +1,42 @@
+package TestsPackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Login {
+
+	public void loginFunc() {
+		System.setProperty("webdriver.chrome.driver", "C:\\ab\\Selenium\\chromedriver.exe");
+	    // Instantiate a ChromeDriver class.
+	    WebDriver  driver = new ChromeDriver();
+
+	    // Launch Website
+	    driver.get("https://github.com/login");
+	    
+	    WebElement username = driver.findElement(By.xpath("//@input[name='username']"));
+	    WebElement passwordElement = driver.findElement(By.xpath("//input[@name='password']"));
+	    // WebElement passwordElement = driver.findElement(By.id("password"));
+	    // WebElement loginBtnElement = driver.findElement(By.name("commit"));;
+	    WebElement LoginBtn = driver.findElement(By.xpath("//input[@name='commit']"));
+	    
+	    
+	    username.sendKeys("asdfgjfy575@gmail.com"); 
+	    passwordElement.sendKeys("Rockcamlin2468");
+	    
+	    LoginBtn.click(); 
+	    
+	    String actualUrl="https://github.com/abrh119"; 
+	    String expectedUrl= driver.getCurrentUrl(); 
+	    
+	    if(actualUrl.equalsIgnoreCase(expectedUrl)) { 
+	    	System.out.println("Test passed"); 
+	    	} 
+	    else { 
+	    	System.out.println("Test failed"); 
+	    	}   
+	}
+
+} 
+

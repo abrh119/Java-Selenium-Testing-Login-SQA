@@ -1,0 +1,38 @@
+package TestsPackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Login {
+
+	public void loginFunc() {
+		System.setProperty("webdriver.chrome.driver", "C:\\ab\\Selenium\\chromedriver.exe");
+	    // Instantiate a ChromeDriver class.
+	    WebDriver  driver = new ChromeDriver();
+
+	    // Launch Website
+	    driver.get("https://github.com/login/");
+	    
+	    WebElement username = driver.findElement(By.className("form-control input-block js-login-field"));
+	    WebElement passwordElement = driver.findElement(By.className("form-control form-control input-block js-password-field"));
+	    WebElement loginBtnElement = driver.findElement(By.className("btn btn-primary btn-block js-sign-in-button"));
+	    
+	    username.sendKeys("asdfgjfy575@gmail.com"); 
+	    passwordElement.sendKeys("Rockcamlin2468");
+	    loginBtnElement.click(); 
+	    
+	    String actualUrl="https://github.com/pulls"; 
+	    String expectedUrl= driver.getCurrentUrl(); 
+	    
+	    if(actualUrl.equalsIgnoreCase(expectedUrl)) { 
+	    	System.out.println("Test passed"); 
+	    	} 
+	    else { 
+	    	System.out.println("Test failed"); 
+	    	}   
+	}
+
+} 
+

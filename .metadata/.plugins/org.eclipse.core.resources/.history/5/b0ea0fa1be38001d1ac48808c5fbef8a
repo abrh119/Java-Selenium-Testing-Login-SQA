@@ -1,0 +1,8 @@
+package TestsPackage;
+
+public class TestQuestion {
+
+	public int addnum(int a, int b) {
+		return a + b;
+	}
+}

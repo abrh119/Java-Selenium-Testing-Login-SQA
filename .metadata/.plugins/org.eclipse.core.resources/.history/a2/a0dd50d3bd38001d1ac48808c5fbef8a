@@ -1,0 +1,20 @@
+package TestsPackage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+	        
+	    
+	    TestQuestion test1 = new TestQuestion();
+	    System.out.println(test1.addnum(5, 7));
+	        
+	    }
+
+}
+

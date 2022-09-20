@@ -1,0 +1,16 @@
+package TestsPackage;
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+	    //Logingithub login = new Login();
+	    Login loginTwo = new Login();
+	    
+	    //login.loginFunc();
+	    loginTwo.loginFunc("ADmin123", "ADminPassword");
+	        
+	    }
+
+}
+

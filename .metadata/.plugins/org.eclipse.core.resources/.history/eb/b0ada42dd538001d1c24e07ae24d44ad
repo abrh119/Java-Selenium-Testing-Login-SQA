@@ -1,0 +1,16 @@
+package TestsPackage;
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+	
+	    //Login login = new Login();
+	    LoginTwo loginTwo = new LoginTwo();
+	    
+	    //login.loginFunc();
+	    loginTwo.loginFunc();
+	        
+	    }
+
+}
+
